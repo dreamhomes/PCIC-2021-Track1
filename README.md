@@ -12,6 +12,6 @@ Baselines:
 
 - TTPM (with topology)
   - Cite: [THP: Topological Hawkes Processes for Learning Granger Causality on Event Sequences](https://arxiv.org/abs/2105.10884)
-  - Code: []()
+  - Code: [https://nbviewer.jupyter.org/github/dreamhomes/PCIC-2021-Track1/blob/master/notebooks/baseline.ipynb](https://nbviewer.jupyter.org/github/dreamhomes/PCIC-2021-Track1/blob/master/notebooks/baseline.ipynb)
 
 
