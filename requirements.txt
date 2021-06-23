@@ -1,6 +1,9 @@
-gcastle==1.0.2
-networkx==2.5.1
 pyvis==0.1.9
-numpy==1.20.3
+loguru==0.5.3
 pandas==1.1.5
+gcastle==1.0.2
+numpy==1.20.3
+networkx==2.5.1
+numexpr==2.7.1
 castle==6.0.0
+typer==0.3.2
