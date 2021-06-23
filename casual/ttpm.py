@@ -121,8 +121,6 @@ def main(
     alarm_data = pd.read_csv(alarm_path, encoding="utf")
     # 拓扑图
     topo_matrix = np.load(topo_path)
-    # 因果图
-    dag_matrix = np.load(dag_path)
 
     alarm_data = preprocessing(alarm_data)
 
@@ -131,11 +129,13 @@ def main(
     os.makedirs("./output/est_graphs", exist_ok=True)
     np.save(f"./output/est_graphs/{iters}-{dataset_name}.npy", est_causal_matrix)
 
-    evaluate(est_causal_matrix, dag_matrix)
-
-    if draw_graph:
-        draw_graph(est_causal_matrix, f"est-{dataset_name}")
-        draw_graph(dag_matrix, f"true-{dataset_name}")
+    if dag_path:
+        # 因果图
+        dag_matrix = np.load(dag_path)
+        evaluate(est_causal_matrix, dag_matrix)
+        if draw_graph:
+            draw_graph(est_causal_matrix, f"est-{dataset_name}")
+            draw_graph(dag_matrix, f"true-{dataset_name}")
 
     # GraphDAG(est_causal_matrix, dag_matrix)
 
